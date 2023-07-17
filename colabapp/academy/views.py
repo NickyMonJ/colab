@@ -39,7 +39,7 @@ def v_subscribe(request, course_id):
     # Traer el ultimo subject de un curso
     subject = Subject.objects.filter(course_id = course_id).last()
     if subject is None:
-        messages.error(request, "No puede suscribirte a este curso.")
+        messages.error(request, "No puedes suscribirte a este curso.")
         return HttpResponseRedirect("/academy/course/%s" % (course_id))
 
     # filter => where course_id = 12 and student_id = 33

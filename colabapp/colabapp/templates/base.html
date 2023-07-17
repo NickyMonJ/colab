@@ -1,4 +1,10 @@
+<!-- este es un comentario HTML -->
+{% comment %}
+Este es un comentario Django
+{% endcomment %}
+
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,7 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#"> Bienvenido: {{ user.username }}</a></li>
                         <li class="nav-item"><a class="nav-link" href="/security/signup">Registrarse</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'admin:logout' %}">Salir</a></li>
                     </ul>
